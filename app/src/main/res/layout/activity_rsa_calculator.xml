@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".rsaCalculator"
+    >
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutNamep"
+        android:layout_width="317dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="32dp"
+        android:hint="@string/enter_the_value_of_p"
+        app:boxBackgroundColor="#FFFFFF"
+        app:boxBackgroundMode="outline"
+        app:counterEnabled="false"
+        app:endIconMode="clear_text"
+        app:endIconTint="#9C27B0"
+        app:helperText="Enter Prime Number Only"
+        app:helperTextEnabled="true"
+        app:helperTextTextColor="#40DD47"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText_rsa_p"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutNamen"
+        android:layout_width="317dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="32dp"
+        android:hint="@string/enter_the_value_of_q"
+        app:boxBackgroundColor="#FFFFFF"
+        app:boxBackgroundMode="outline"
+        app:counterEnabled="false"
+        app:endIconMode="clear_text"
+        app:endIconTint="#9C27B0"
+        app:helperText="Enter Prime Number Only"
+        app:helperTextEnabled="true"
+        app:helperTextTextColor="#40DD47"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutNamep"
+        tools:ignore="DuplicateIds">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText_rsa_q"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutNamex"
+        android:layout_width="317dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="32dp"
+        android:hint="@string/enter_the_value_of_e"
+        app:boxBackgroundColor="#FFFFFF"
+        app:boxBackgroundMode="outline"
+        app:endIconMode="clear_text"
+        app:endIconTint="#9C27B0"
+        app:helperTextEnabled="true"
+        app:helperTextTextColor="#40DD47"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutNamen">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText_rsa_e"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutNamey"
+        android:layout_width="317dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="32dp"
+        android:hint="@string/enter_the_plain_text"
+        app:boxBackgroundColor="#FFFFFF"
+        app:boxBackgroundMode="outline"
+        app:endIconMode="clear_text"
+        app:endIconTint="#9C27B0"
+        app:helperTextTextColor="#40DD47"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutNamex"
+        tools:ignore="DuplicateIds">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText_rsa_plain"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/encrypRsaText"
+        android:layout_width="329dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/encrypted_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutNamey" />
+
+    <TextView
+        android:id="@+id/decrypRsaText"
+        android:layout_width="338dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/decrypted_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/encrypRsaText" />
+
+    <android.widget.Button
+        android:id="@+id/rsaCalculate"
+        android:layout_width="144dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/gradient_button"
+        android:text="@string/calculate"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/rsaClean"
+        app:layout_constraintHorizontal_bias="0.756"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/decrypRsaText" />
+
+    <android.widget.Button
+        android:id="@+id/rsaClean"
+        android:layout_width="144dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/clearbtn"
+        android:text="@string/clean"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.779"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/decrypRsaText" />
+
+    <android.widget.Button
+        android:id="@+id/rsaStep"
+        android:layout_width="144dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/stepbtn"
+        android:text="@string/step"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rsaClean" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

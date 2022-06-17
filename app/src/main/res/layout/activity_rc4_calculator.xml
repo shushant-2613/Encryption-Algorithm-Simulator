@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp"
+    >
+
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".rc4Calculator">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="*Note :-\n
+       1) Size of key array should be less than or equal to s array.\n
+       2) Elements in array should be less than or equal to 4 digits."
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/red"
+        android:textSize="13dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rc4CalculateClear"
+        app:layout_constraintVertical_bias="0.91" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutNamep"
+        android:layout_width="317dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="32dp"
+        android:hint="@string/enter_the_s_array"
+        app:helperText="Eg :- 1 2 3 4 5 "
+        app:helperTextEnabled="true"
+        app:boxBackgroundColor="#FFFFFF"
+        app:boxBackgroundMode="outline"
+        app:counterEnabled="false"
+        app:endIconMode="clear_text"
+        app:endIconTint="#9C27B0"
+        app:helperTextTextColor="#40DD47"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText_rc4_s"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutNamen"
+        android:layout_width="317dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="32dp"
+        android:hint="@string/enter_the_key_array"
+        app:helperText="Eg :- 1 2 3 4 5 "
+        app:helperTextEnabled="true"
+        app:boxBackgroundColor="#FFFFFF"
+        app:boxBackgroundMode="outline"
+        app:counterEnabled="false"
+        app:endIconMode="clear_text"
+        app:endIconTint="#9C27B0"
+        app:helperTextTextColor="#40DD47"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutNamep"
+        tools:ignore="DuplicateIds">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText_rc4_key"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutNamex"
+        android:layout_width="317dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="32dp"
+        android:hint="@string/enter_the_plain_text_array"
+        app:helperText="Eg :- 1 2 3 4 5 "
+        app:helperTextEnabled="true"
+        app:boxBackgroundColor="#FFFFFF"
+        app:boxBackgroundMode="outline"
+        app:endIconMode="clear_text"
+        app:endIconTint="#9C27B0"
+        app:helperTextTextColor="#40DD47"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutNamen">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText_rc4_plain"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/encrypRc4Text"
+        android:layout_width="321dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="40dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutNamex" />
+
+    <TextView
+        android:id="@+id/decrypRc4Text"
+        android:layout_width="320dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="488dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="@+id/encrypRc4Text"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/encrypRc4Text"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.widget.Button
+        android:id="@+id/rc4Calculate"
+        android:layout_width="144dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="48dp"
+        android:background="@drawable/gradient_button"
+        android:text="@string/calculate"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/rc4CalculateClear"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/decrypRc4Text" />
+
+    <android.widget.Button
+        android:id="@+id/rc4CalculateClear"
+        android:layout_width="144dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/clearbtn"
+        android:text="@string/clean"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rc4Calculate"
+        app:layout_constraintTop_toBottomOf="@+id/decrypRc4Text" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

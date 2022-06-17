@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".rc4_theory">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/rc4"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/u25ba_rc4_is_a_stream_cipher_and_variable_length_key_algorithm_this_algorithm_encrypts_one_byte_at_a_time_or_larger_units_at_a_time_n_n_u25ba_a_key_input_is_pseudorandom_bit_generator_that_produces_a_stream_8_bit_number_that_is_unpredictable_without_knowledge_of_input_key_the_output_of_the_generator_is_called_key_stream_is_combined_one_byte_at_a_time_with_the_plaintext_stream_cipher_using_x_or_operation_n_n_u25ba_procedure_n_t_t_t_t_t_t_u25cf_uses_an_array_s_state_vector_of_length_256_0_255_n_t_t_t_t_t_t_u25cf_it_has_key_encoded_with_ascii_n_t_t_t_t_t_t_u25cf_it_has_key_array_of_length_256_0_255_n_n_n_steps_involve_in_rc4_algorithm_n_n_t_t_t_t_t_tkey_generation_algorithm_t_ta_variable_length_key_from_1_to_256_bytes_is_used_to_initialize_a_256_byte_state_vector_s_with_elements_s_0_to_s_255_for_encryption_and_decryption_a_byte_k_is_generated_from_s_by_selecting_one_of_the_255_entries_in_a_systematic_fashion_then_the_entries_in_s_are_permuted_again_n_n_u25cf_key_scheduling_algorithm_n_n_t_t_t_t_t_t_initialization_the_entries_of_s_are_set_equal_to_the_values_from_0_to_255_in_ascending_order_a_temporary_vector_t_is_created_if_the_length_of_the_key_k_is_256_bytes_then_k_is_assigned_to_t_otherwise_for_a_key_with_length_k_len_bytes_the_first_k_len_elements_of_t_as_copied_from_k_and_then_k_is_repeated_as_many_times_as_necessary_to_fill_t_the_idea_is_illustrated_as_follow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+
+    <ImageView
+        android:id="@+id/firstRc4ImageId"
+        android:layout_width="397dp"
+        android:layout_height="103dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/first_rc4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.785"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:autoSizeTextType="uniform"
+        android:text="\t\t\t\t\t\twe use T to produce the initial permutation of S. Starting with S[0] to S[255], and for each S[i] algorithm swap it with another byte in S according to a scheme dictated by T[i], but S will still contain values from 0 to 255 :"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstRc4ImageId" />
+
+    <ImageView
+        android:id="@+id/secondRc4ImageId"
+        android:layout_width="405dp"
+        android:layout_height="119dp"
+        android:layout_marginLeft="00dp"
+        android:src="@drawable/second_rc4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:autoSizeTextType="uniform"
+        android:text="\u25CF Pseudo random generation algorithm (Stream Generation): \n\n
+        Once the vector S is initialized, the input key will not be used. In this step, for each S[i] algorithm swap it with another byte in S according to a scheme dictated by the current configuration of S. After reaching S[255] the process continues, starting from S[0] again"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secondRc4ImageId" />
+
+
+    <ImageView
+        android:id="@+id/thirdRc4ImageId"
+        android:layout_width="413dp"
+        android:layout_height="196dp"
+        android:src="@drawable/third_rc4"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="406dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:autoSizeTextType="uniform"
+        android:text="@string/t_u25cf_encrypt_using_x_or"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/thirdRc4ImageId" />
+
+    <ImageView
+        android:id="@+id/rc4_xor"
+        android:layout_width="337dp"
+        android:layout_height="210dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/fourth_rc4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <android.widget.Button
+        android:id="@+id/rc4SimulationBtn"
+        android:layout_width="149dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/stimulatebtn"
+        android:text="@string/simulate"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.438"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rc4_xor"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

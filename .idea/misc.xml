@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/shush/Desktop/Algo{02-05-2022}/VI_Project/app/src/main/res/layout/activity_dh_theory.xml" value="0.25" />
+        <entry key="..\:/Users/shush/Desktop/Algo{02-05-2022}/VI_Project/app/src/main/res/layout/activity_diffie_calculator.xml" value="0.10885416666666667" />
+        <entry key="..\:/Users/shush/Desktop/Algo{02-05-2022}/VI_Project/app/src/main/res/layout/activity_diffie_calculator_steps.xml" value="0.10989583333333333" />
+        <entry key="..\:/Users/shush/Desktop/Algo{02-05-2022}/VI_Project/app/src/main/res/layout/activity_first_page.xml" value="0.10885416666666667" />
+        <entry key="..\:/Users/shush/Desktop/Algo{02-05-2022}/VI_Project/app/src/main/res/layout/activity_image_zoom.xml" value="0.10989583333333333" />
+        <entry key="..\:/Users/shush/Desktop/Algo{02-05-2022}/VI_Project/app/src/main/res/layout/activity_main.xml" value="0.10885416666666667" />
+        <entry key="..\:/Users/shush/Desktop/Algo{02-05-2022}/VI_Project/app/src/main/res/layout/activity_rc4_calculator.xml" value="0.10885416666666667" />
+        <entry key="..\:/Users/shush/Desktop/Algo{02-05-2022}/VI_Project/app/src/main/res/layout/activity_rc4_theory.xml" value="0.152" />
+        <entry key="..\:/Users/shush/Desktop/Algo{02-05-2022}/VI_Project/app/src/main/res/layout/activity_rsa_calculator.xml" value="0.10885416666666667" />
+        <entry key="..\:/Users/shush/Desktop/Algo{02-05-2022}/VI_Project/app/src/main/res/layout/activity_rsa_theory.xml" value="0.10885416666666667" />
+        <entry key="..\:/Users/shush/Desktop/Algo{02-05-2022}/VI_Project/app/src/main/res/layout/activity_vigenere_calculator.xml" value="0.10885416666666667" />
+        <entry key="..\:/Users/shush/Desktop/Algo{02-05-2022}/VI_Project/app/src/main/res/layout/activity_vigenere_theory.xml" value="0.10885416666666667" />
+        <entry key="..\:/Users/shush/Desktop/Algo{02-05-2022}/VI_Project/app/src/main/res/layout/fragment_first.xml" value="0.152" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

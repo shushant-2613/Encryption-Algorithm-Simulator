@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp"
+    >
+
+
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+
+    <TextView
+        android:id="@+id/dh_heading"
+        android:layout_width="121dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/diffie_hellman"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dh_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="
+
+\u25BA It is also knowns as Diffie-Hellman key Exchange/Agreement Algorithm.\n\n
+
+\u25BA It is a method of securely exchanging cryptographic keys over a public channel and was one of the first public-key protocols as conceived by Ralph Merkle and named after
+Whitfield Diffie and Martin Hellman.\n\n
+
+\u25BA The main advantage of this algorithm is that when two parties, who want to communicate securely, can agree on a symmetric key using this technique.\n\n
+
+\u25BA This key can be used for Encryption and Decryption.\n\n
+
+\u25BA This algorithm can be used only for key agreement, but note for encryption or decryption.\n\n
+
+\u25BA Once both the parties agree on the key to be used, they need to use other key encryption algorithm.\n\n
+        "
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dh_heading" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoSizeTextType="uniform"
+        android:textSize="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="  ALGORITHM \n\n
+Step 1 : Firstly, Alice and Bob agree upon 2 large prime numbers, n and g. These two integers need not to be kept secret. Alice and Bob can use an insecure channel to agree on them.\n\n
+\t\t\t\tLet n=11, g=7.
+
+\n\nStep 2 :  Alice choose another large random number x, and calculates A such that \n\n
+\t\t\t\t\t\t\t\tA = g^x mod n\n\n
+\t\t\t\tLet x=3.\n
+\t\t\t\tThen, we have, A = 7^3 mod 11 = 343 mod 11 = 2.
+
+\n\nStep 3 : Alice sends the number A to Bob. \n
+\t\t\t\tAlice sends 2 to Bob.
+
+\n\nStep 4 : Bob independently chooses another large random integer y and calculates B such that \n\n
+\t\t\t\t\t\t\t\tB = g^y mod n \n\n
+\t\t\t\t Let y=6.\n
+\t\t\t\tThen, we have, B = 7^6 mod 11 = 117649 mod 11 = 4.
+
+\n\nStep 5 : Bob sends the number B to Alice.\n
+\t\t\t\tBob sends 4 to Alice.
+
+\n\nStep 6 : A now computes the secret key K1 as follows:\n\n
+\t\t\t\t\t\t\t\tK1 = B^x mod n \n\n
+\t\t\t\tWe have, K1 = 4^3 mod 11 = 64 mod 11 = 9.
+
+\n\nStep 7 : B now computes the secret key K2 as follows:\n\n
+\t\t\t\t\t\t\t\tK2 = A^y mod n \n\n
+\t\t\t\tWe have, K2 = 2^6 mod 11 = 64 mod 11 = 9.\n\n"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_diffie_hellman" />
+
+    <ImageView
+        android:id="@+id/id_diffie_hellman"
+        android:layout_width="match_parent"
+        android:layout_height="277dp"
+        android:layout_marginTop="40dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/diffie_hellman"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dh_text" />
+
+    <ImageView
+        android:id="@+id/id_speak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/ic_speak"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dh_heading" />
+
+
+    <android.widget.Button
+        android:id="@+id/diffie_calculator"
+        android:layout_width="144dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/stimulatebtn"
+        android:gravity="center"
+        android:text="@string/simulate"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

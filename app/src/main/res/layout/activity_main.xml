@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp"
+    >
+
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".firstPage"
+    >
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/amarante"
+        android:text="@string/we_will_bankrupt_ourselves_in_the_vain_search_for_absolute_security"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#77c593"
+        android:textColorHighlight="#2196F3"
+        android:textColorLink="#FF9800"
+        android:textSize="20dp"
+        android:textStyle="bold|italic" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/splashscreen" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="620dp"
+        android:fontFamily="@font/amarante"
+        android:text="@string/there_are_only_two_types_of_company_those_that_have_been_hacked_and_those_that_will_be"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#77c593"
+        android:textColorHighlight="#2196F3"
+        android:textColorLink="#FF9800"
+        android:textSize="20dp"
+        android:textStyle="bold|italic" />
+
+</RelativeLayout>
+</ScrollView>

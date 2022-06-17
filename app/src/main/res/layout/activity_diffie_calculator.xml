@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp"
+    >
+
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".diffieCalculator">
+
+    <android.widget.Button
+        android:id="@+id/diffie_calculate_calculate"
+        android:layout_width="144dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/gradient_button"
+        android:text="@string/calculate"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.213"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_diffie_k1" />
+
+    <android.widget.Button
+        android:id="@+id/diffie_calculate_clear"
+        android:layout_width="144dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/clearbtn"
+        android:gravity="center"
+        android:text="@string/clean"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.846"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_diffie_k2" />
+
+    <android.widget.Button
+        android:id="@+id/diffie_calculate_step"
+        android:layout_width="144dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/stepbtn"
+        android:text="@string/step"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diffie_calculate_calculate" />
+
+    <TextView
+        android:id="@+id/editText_diffie_k2"
+        android:layout_width="146dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.373"
+        app:layout_constraintStart_toEndOf="@+id/editText_diffie_k1"
+        app:layout_constraintTop_toBottomOf="@+id/layoutNamey" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutNamey"
+        android:layout_width="317dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="32dp"
+        android:hint="@string/enter_the_value_of_y"
+        app:boxBackgroundColor="#FFFFFF"
+        app:boxBackgroundMode="outline"
+        app:counterEnabled="true"
+        app:counterMaxLength="19"
+        app:endIconMode="clear_text"
+        app:endIconTint="#9C27B0"
+        app:helperTextTextColor="#40DD47"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutNamex"
+        tools:ignore="DuplicateIds">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText_diffie_y"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutNamex"
+        android:layout_width="317dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="32dp"
+        android:hint="@string/enter_the_value_of_x"
+        app:boxBackgroundColor="#FFFFFF"
+        app:boxBackgroundMode="outline"
+        app:counterEnabled="true"
+        app:counterMaxLength="19"
+        app:endIconMode="clear_text"
+        app:endIconTint="#9C27B0"
+        app:helperTextEnabled="true"
+        app:helperTextTextColor="#40DD47"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutNamen">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText_diffie_x"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutNamen"
+        android:layout_width="317dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="32dp"
+        android:hint="@string/enter_the_value_of_n"
+        app:boxBackgroundColor="#FFFFFF"
+        app:boxBackgroundMode="outline"
+        app:counterEnabled="true"
+        app:counterMaxLength="19"
+        app:endIconMode="clear_text"
+        app:endIconTint="#9C27B0"
+        app:helperText="Enter Prime Number Only"
+        app:helperTextEnabled="true"
+        app:helperTextTextColor="#40DD47"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutNamep"
+        tools:ignore="DuplicateIds">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText_diffie_n"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/editText_diffie_k1"
+        android:layout_width="146dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/editText_diffie_k2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutNamey" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutNamep"
+        android:layout_width="317dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="32dp"
+        android:hint="@string/enter_the_value_of_g"
+        app:boxBackgroundColor="#FFFFFF"
+        app:boxBackgroundMode="outline"
+        app:counterEnabled="true"
+        app:counterMaxLength="19"
+        app:endIconMode="clear_text"
+        app:endIconTint="#9C27B0"
+        app:helperText="Enter Prime Number Only"
+        app:helperTextEnabled="true"
+        app:helperTextTextColor="#40DD47"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText_diffie_g"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

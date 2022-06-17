@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp"
+    >
+
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".vigenereCalculator">
+
+    <android.widget.Button
+        android:id="@+id/vigenereCalculateBtn"
+        android:layout_width="144dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/gradient_button"
+        android:text="@string/calculate"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/vigenereCleanBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vigenereDecrypt" />
+
+    <android.widget.Button
+        android:id="@+id/vigenereCleanBtn"
+        android:layout_width="144dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/clearbtn"
+        android:text="@string/clean"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.787"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vigenereDecrypt" />
+
+    <android.widget.Button
+        android:id="@+id/vigenereStepBtn"
+        android:layout_width="144dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="164dp"
+        android:background="@drawable/stepbtn"
+        android:text="@string/step"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vigenereDecrypt" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutNamen"
+        android:layout_width="317dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="28dp"
+        android:hint="@string/enter_the_key"
+        app:helperText="Eg :- Hacker"
+        app:boxBackgroundColor="#FFFFFF"
+        app:boxBackgroundMode="outline"
+        app:counterEnabled="false"
+        app:endIconMode="clear_text"
+        app:endIconTint="#9C27B0"
+        app:helperTextTextColor="#40DD47"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutNamep"
+        tools:ignore="DuplicateIds">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText_rsa_q"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutNamep"
+        android:layout_width="317dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="32dp"
+        android:hint="@string/enter_the_plain_text"
+        app:helperText="Eg :- It is a CSS Subject"
+        app:boxBackgroundColor="#FFFFFF"
+        app:boxBackgroundMode="outline"
+        app:counterEnabled="false"
+        app:endIconMode="clear_text"
+        app:endIconTint="#9C27B0"
+        app:helperTextTextColor="#40DD47"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/vigenerePlainText"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/vigenereEncrypt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutNamen" />
+
+    <TextView
+        android:id="@+id/vigenereDecrypt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="@+id/vigenereEncrypt"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/vigenereEncrypt"
+        app:layout_constraintTop_toBottomOf="@+id/vigenereEncrypt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

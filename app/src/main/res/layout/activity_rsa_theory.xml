@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".rsa_theory">
+
+
+    <TextView
+        android:id="@+id/dh_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="15dp"
+        android:text="
+
+\n\t\u25BA RSA stands for Rivest-Shamir-Adleman.\n\n
+
+\u25BA RSA encryption algorithm is a type of Public key encryption algorithm.\n\n
+
+\u25BA Public key encryption algorithm is also known as Asymmetric algorithm used for secure data transmission
+over the internet.\n\n
+
+\u25BA Transmitting confidential and sensitive data over the internet through this technology is safe due to its standard encryption method.\n\n
+
+\u25BA The algorithm is based on the factorization of large number. Large numbers cannot be easily factorized,
+so breaking into the message for intruders is difficult.\n\n
+
+\u25BA Asymmetric algorithms are those algorithms in which sender and receiver use different keys for encryption and decryption. Decryption cannot be done by using a public key.\n\n
+
+\u25BA Public key is used for encryption and private key is used for decryption.\n\n
+
+\u25BA As the name suggest Public key is well known, but the private key is secret and it is known only to the user who owns the key.\n\n
+
+\u25BA If the sender wants to send a message it will send he will send message using his public key and receiver will decrypt ir using his private key.\n\n        "
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="24dp"
+        android:text="  ALGORITHM \n\n
+Step 1 : Choose two large prime p and q.
+
+\t\t\n\nStep 2 :  Calculate N = p x q.
+
+\t\t\n\nStep 3 : Select the public key(i.e the Encryption key) e such that it is not
+a factor of (p-1) and (q-1).
+
+\t\t\n\nStep 4 : Select the private key (i.e Decryption key) d such that the following
+equation is true \n\n
+              (dxe) mod (p-1) x (q-1).\n\n
+     Another way to calculate the value of d\n\n
+              ∅(N) = (p-1) * (q-1)\n
+              d = (k x ∅(N) + 1) / e;\n\n
+
+     where the value of k is starts from 1 it get on increasing until we get the value of d as Integer.
+
+
+\t\t\n\nStep 5 : For Encryption, Calculate the cipher text ct from the plain text pt
+as follows \n\n
+                ct =  pt^e mod N
+
+\t\t\n\nStep 6 : Send ct as the cipher text to the receiver.
+
+\t\t\n\nStep 7 : For Decryption, Calculate the plain text pt from the cipher text ct
+as follows \n\n
+                pt =  ct^d mod N\n\n"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.636"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dh_text"
+        tools:ignore="MissingConstraints" />
+
+
+    <android.widget.Button
+        android:id="@+id/rsaSimulationBtn"
+        android:layout_width="120dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/stimulatebtn"
+        android:text="@string/simulate"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="94dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="16dp"
+        android:text="      RSA"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Algo</string>
+    <string name="title_activity_splashscreen">splashscreen</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_diffie_calculate_step">diffieCalculateStep</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="diffie_hellman">Diffie Hellman</string>
+    <string name="rsa">RSA</string>
+    <string name="vigenere">VIGENERE</string>
+    <string name="rc4">RC4</string>
+    <string name="css_algorithms">CSS ALGORITHMS</string>
+    <string name="u25ba_rc4_is_a_stream_cipher_and_variable_length_key_algorithm_this_algorithm_encrypts_one_byte_at_a_time_or_larger_units_at_a_time_n_n_u25ba_a_key_input_is_pseudorandom_bit_generator_that_produces_a_stream_8_bit_number_that_is_unpredictable_without_knowledge_of_input_key_the_output_of_the_generator_is_called_key_stream_is_combined_one_byte_at_a_time_with_the_plaintext_stream_cipher_using_x_or_operation_n_n_u25ba_procedure_n_t_t_t_t_t_t_u25cf_uses_an_array_s_state_vector_of_length_256_0_255_n_t_t_t_t_t_t_u25cf_it_has_key_encoded_with_ascii_n_t_t_t_t_t_t_u25cf_it_has_key_array_of_length_256_0_255_n_n_n_steps_involve_in_rc4_algorithm_n_n_t_t_t_t_t_tkey_generation_algorithm_t_ta_variable_length_key_from_1_to_256_bytes_is_used_to_initialize_a_256_byte_state_vector_s_with_elements_s_0_to_s_255_for_encryption_and_decryption_a_byte_k_is_generated_from_s_by_selecting_one_of_the_255_entries_in_a_systematic_fashion_then_the_entries_in_s_are_permuted_again_n_n_u25cf_key_scheduling_algorithm_n_n_t_t_t_t_t_t_initialization_the_entries_of_s_are_set_equal_to_the_values_from_0_to_255_in_ascending_order_a_temporary_vector_t_is_created_if_the_length_of_the_key_k_is_256_bytes_then_k_is_assigned_to_t_otherwise_for_a_key_with_length_k_len_bytes_the_first_k_len_elements_of_t_as_copied_from_k_and_then_k_is_repeated_as_many_times_as_necessary_to_fill_t_the_idea_is_illustrated_as_follow">► RC4 is a stream cipher and variable-length key algorithm. This algorithm encrypts one byte at a time (or larger units at a time).\n\n ► A key input is pseudorandom bit generator that produces a stream 8-bit number that is unpredictable without knowledge of input key, The output of the generator is called key-stream, is combined one byte at a time with the plaintext stream cipher using X-OR operation.\n\n ► Procedure :- \n \t\t\t\t\t\t● Uses an Array(s) - State Vector of Length 256(0-255).\n \t\t\t\t\t\t● It has Key Encoded with ASCII.\n \t\t\t\t\t\t● It has Key Array of Length 256(0-255)\n\n\n STEPS INVOLVE IN RC4 ALGORITHM :- \n\n \t\t\t\t\t\tKey-Generation Algorithm :–\t\tA variable-length key from 1 to 256 bytes is used to initialize a 256-byte state vector S, with elements S[0] to S[255]. For encryption and decryption, a byte k is generated from S by selecting one of the 255 entries in a systematic fashion, then the entries in S are permuted again. \n\n● Key-Scheduling Algorithm:\n\n \t\t\t\t\t\tInitialization: The entries of S are set equal to the values from 0 to 255 in ascending order, a temporary vector T, is created. If the length of the key k is 256 bytes, then k is assigned to T. Otherwise, for a key with length(k-len) bytes, the first k-len elements of T as copied from K, and then K is repeated as many times as necessary to fill T. The idea is illustrated as follow:</string>
+    <string name="t_u25cf_encrypt_using_x_or">\t● Encrypt using X-Or():</string>
+    <string name="simulate">Simulate</string>
+    <string name="enter_the_value_of_p">Enter the Value of P</string>
+    <string name="enter_the_value_of_q">Enter the Value of Q</string>
+    <string name="enter_the_value_of_e">Enter the Value of e</string>
+    <string name="enter_the_plain_text">Enter the Plain Text</string>
+    <string name="encrypted_text">Encrypted text</string>
+    <string name="decrypted_text">Decrypted text</string>
+    <string name="calculate">Calculate</string>
+    <string name="clean">Clean</string>
+    <string name="step">Step</string>
+    <string name="enter_the_key">Enter the Key</string>
+    <string name="vigenere_cipher">Vigenere Cipher</string>
+    <string name="we_will_bankrupt_ourselves_in_the_vain_search_for_absolute_security">We will bankrupt ourselves in the vain search for absolute security..</string>
+    <string name="there_are_only_two_types_of_company_those_that_have_been_hacked_and_those_that_will_be">There are only two types of company those that have been hacked, and those that will be.</string>
+    <string name="enter_the_s_array">Enter the S Array</string>
+    <string name="enter_the_key_array">Enter the Key Array</string>
+    <string name="enter_the_plain_text_array">Enter the Plain Text Array</string>
+    <string name="enter_the_value_of_y">Enter the Value of Y</string>
+    <string name="enter_the_value_of_x">Enter the Value of X</string>
+    <string name="enter_the_value_of_n">Enter the Value of N</string>
+    <string name="enter_the_value_of_g">Enter the Value of G</string>
+
+</resources>

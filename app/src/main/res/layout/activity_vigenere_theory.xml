@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".dh_theory">
+
+
+        <TextView
+            android:id="@+id/dh_heading"
+            android:layout_width="212dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="36dp"
+            android:gravity="clip_horizontal"
+            android:saveEnabled="true"
+            android:text="@string/vigenere_cipher"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/dh_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:autoText="true"
+            android:layout_marginLeft="5dp"
+            android:textSize="15dp"
+            android:text="
+\u25BA This algorithm was first described in 1553 by Giovan Battista Bellaso.\n\n
+
+\u25BA Vigenere Cipher is a method of encrypting alphabetic text. It uses a simple form of polyalphabetic substitution.\n\n
+
+\u25BA A polyalphabetic cipher is any cipher based on substitution, using multiple substitution alphabets.\n\n
+
+\u25BA The vigenere cipher is an algorithm that is used to encrypting and decrypting the text. The vigenere cipher is an algorithm of encrypting an alphabetic text that uses a series of interwoven caesar ciphers. It is based on a keyword's letters. It is an example of a polyalphabetic substitution cipher.\n\n
+
+\u25BA This algorithm is easy to understand and implement.\n\n
+
+\u25BA  It uses a Vigenere table or Vigenere square for encryption and decryption of the text.\n\n
+
+\u25BA The vigenere table is also called the tabula recta.\n\n
+
+\u25BA There are the two methods to solve the vigenere cipher.\n\n
+
+\t\t\t\u25CF  When the vigenere table is given. The table consists of the alphabets written out 26 times in different rows, each alphabet shifted cyclically to the left compared to the previous alphabet, corresponding to the 26 possible Caesar Ciphers. \n
+              In this method at different points in the encryption process, the cipher uses a different alphabet from one of the rows. The alphabet used at each point depends ona a repeating keywords.\n\n
+
+\t\t\t\u25CF  When the vigenere table is not given, the encryption and decryption are done by vigenere algebraically formula in this method(Convert the letters (A-Z) into the numbers(0-25)).\n
+                \t\t\t\u25AA Formula of encryption is, E = (P + K) mod 26.\n
+                \t\t\t\u25AA Formula of encryption is, D = (E - K) mod 26.\n
+                \t\t\t\t\t\tWhere P is plain text, K is key.\n
+
+"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.515"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dh_heading"
+            tools:ignore="Deprecated" />
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="  Example \n\n
+\t\t\t\tE denotes the encryption.\n
+
+\t\t\tD denotes the decryption.\n
+
+\t\t\tP denotes the plaintext.\n
+
+\t\t\tK denotes the key.\n\n
+        Consider Plain text = JAVATPOINT and key = BEST,\n\n
+
+        \t\t\tEncryption : Ei = (Pi + Ki) mod 26\n\n
+                    where i denotes the offset of the ith number of the letters, as show in the table below.
+"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.014"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dh_text" />
+
+        <ImageView
+            android:id="@+id/id_diffie_hellman"
+            android:layout_width="397dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/firstvigenereimg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.285"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text=" Encryption : Ei = (Pi + Ki) mod 26."
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.237"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_diffie_hellman" />
+
+
+        <ImageView
+            android:id="@+id/VigenereEncryprion"
+            android:layout_width="399dp"
+            android:layout_height="212dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/vigenereencryption"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.083"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textSize="15dp"
+            android:layout_marginTop="8dp"
+            android:text=" Decryption : Di = (Ei - Ki) mod 26. \n\n
+            If any case (Di) value becomes negative (-ve), in this case, we will add 26 in the negative value. Like, the third letter of the ciphertext;\n
+            \n\t\t\t\tDi = (Ei - Ki) mod 26\n
+
+            \n\t\t\t\tDi = (13 - 18) mod 26\n
+
+            \n\t\t\t\tDi = -5 mod 26\n
+
+            \n\t\t\t\tDi = (-5 + 26) mod 26\n
+
+            \n\t\t\t\tDi = 21
+"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/VigenereEncryprion" />
+
+
+        <ImageView
+            android:id="@+id/VigenereDecryprion"
+            android:layout_width="394dp"
+            android:layout_height="212dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/vigeneredecryption"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.352"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+
+        <android.widget.Button
+            android:id="@+id/vigenere_simulator_btn"
+            android:layout_width="144dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:background="@drawable/stimulatebtn"
+            android:text="@string/simulate"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.468"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/VigenereDecryprion" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
+
